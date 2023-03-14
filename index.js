@@ -7,7 +7,6 @@ form.addEventListener("submit", function(e) {
     e.preventDefault();
 
     appointment.name = document.querySelector(".name").value;
-    appointment.doctor = document.querySelector(".doctor").value;
     appointment.phone = document.querySelector(".phone").value;
     appointment.comment = document.querySelector(".comment").value;
 
