@@ -1,6 +1,9 @@
 let tg = window.Telegram.WebApp;
 tg.MainButton.show();
+let counter = document.querySelector(".counter");
+let count = 0;
 
 tg.onEvent(mainButtonClicked, () => {
-    document.querySelector(".title").innerText = "Clicked";
+    count++
+    counter.textContent = String(count);
 })
