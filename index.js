@@ -8,7 +8,7 @@ const appointment = {
     comment
 }
 
-form.addEventListener("submit", (e) => {
+function getData(e) {
     e.preventDefault();
 
     appointment.name = document.querySelector(".name").value;
@@ -17,7 +17,9 @@ form.addEventListener("submit", (e) => {
     appointment.comment = document.querySelector(".comment").value;
 
     tg.MainButton.show();
-})
+}
+
+form.addEventListener("submit", getData);
 
 tg.onEvent('mainButtonClicked', () => {
 
