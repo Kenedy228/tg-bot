@@ -2,10 +2,6 @@ let tg = window.Telegram.WebApp;
 let form = document.querySelector("#appointment");
 
 const appointment = {
-    name: "",
-    doctor: "",
-    phone: "",
-    comment: ""
 }
 
 form.addEventListener("submit", function(e) {
