@@ -16,7 +16,6 @@ form.addEventListener("submit", function(e) {
     tg.MainButton.show();
 });
 
-
 tg.onEvent('mainButtonClicked', () => {
 
     fetch('http://localhost:8000', {
