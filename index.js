@@ -4,6 +4,17 @@ let counter = document.querySelector(".counter");
 let count = 0;
 
 tg.onEvent('mainButtonClicked', () => {
-    count++
-    counter.textContent = String(count);
+    let name = document.querySelector(".name").value;
+    let doctor = document.querySelector(".doctor").value;
+    let phone = document.querySelector(".phone").value;
+    let comment = document.querySelector(".comment").value;
+
+    const appointment = {
+        name,
+        doctor,
+        phone,
+        comment
+    }
+
+    alert(appointment);
 })
