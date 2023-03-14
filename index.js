@@ -9,6 +9,7 @@ const appointment = {
 }
 
 form.addEventListener("submit", function(e) {
+    console.log(e);
     e.preventDefault();
 
     appointment.name = document.querySelector(".name").value;
