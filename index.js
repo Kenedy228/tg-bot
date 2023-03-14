@@ -1,8 +1,7 @@
 let tg = window.Telegram.WebApp;
 let form = document.querySelector("#appointment");
 
-const appointment = {
-}
+const appointment = {}
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -16,7 +15,6 @@ form.addEventListener("submit", function(e) {
 });
 
 tg.onEvent('mainButtonClicked', () => {
-
     fetch('http://localhost:8000', {
         method: "POST",
         headers: {
