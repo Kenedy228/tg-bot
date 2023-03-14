@@ -1,5 +1,5 @@
 let tg = window.Telegram.WebApp;
-let form = document.querySelector(".appointment");
+let form = document.querySelector("#appointment");
 
 const appointment = {
     name,
