@@ -14,7 +14,7 @@ tg.onEvent('mainButtonClicked', () => {
         comment
     }
 
-    for (let value of appointment) {
+    for (let value of Object.values(appointment)) {
         alert(value);
     }
 })
