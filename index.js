@@ -1,4 +1,6 @@
 let tg = window.Telegram.WebApp;
 tg.MainButton.show();
 
-const elem = document.querySelector("h1").innerText;
+tg.onEvent(mainButtonClicked, () => {
+    document.querySelector("h1").innerText = "Clicked";
+})
