@@ -14,5 +14,7 @@ tg.onEvent('mainButtonClicked', () => {
         comment
     }
 
-    alert(appointment);
+    for (let value of appointment) {
+        alert(value);
+    }
 })
