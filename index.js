@@ -9,9 +9,10 @@ form.addEventListener("submit", function(e) {
     appointment.name = document.querySelector(".name").value;
     appointment.phone = document.querySelector(".phone").value;
     appointment.comment = document.querySelector(".comment").value;
-    appointment.queryID = tg.queryID;
+    appointment.queryID = tg.initDataUnsafe.queryId;
 
     console.log(appointment.queryID);
+    console.log(appointment);
     tg.MainButton.show();
 });
 
