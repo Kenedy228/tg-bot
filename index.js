@@ -17,7 +17,7 @@ form.addEventListener("submit", function(e) {
 
 tg.onEvent('mainButtonClicked', () => {
 
-    document.querySelector(".comment").textContent = queryId;
+    document.querySelector(".comment").textContent = tg.initDataUnsafe.query_id;
 
     fetch('http://185.143.174.146:8000/web-data', {
         method: "POST",
