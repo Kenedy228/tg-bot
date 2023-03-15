@@ -13,8 +13,6 @@ form.addEventListener("submit", function(e) {
     appointment.queryID = ""
 
     console.log(tgdata);
-    console.log(tgdata.initDataUnsafe);
-    console.log(tgdata.initDataUnsafe.query_id);
     tg.MainButton.show();
 });
 
