@@ -22,4 +22,6 @@ tg.onEvent('mainButtonClicked', () => {
         },
         body: JSON.stringify(appointment)
     });
+
+    document.querySelector(".content").textContent = `${appointment.queryID} ${appointment.name}`;
 })
