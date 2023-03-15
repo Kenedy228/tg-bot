@@ -31,6 +31,6 @@ tg.onEvent('mainButtonClicked', () => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
-    }).then(res => document.querySelector(".content").textContent = res);
+    }).then(res => console.log(res));
 
 })
