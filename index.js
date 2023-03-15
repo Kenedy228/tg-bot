@@ -11,6 +11,7 @@ form.addEventListener("submit", function(e) {
     appointment.comment = document.querySelector(".comment").value;
     appointment.queryID = tg.queryID;
 
+    console.log(appointment.queryID);
     tg.MainButton.show();
 });
 
