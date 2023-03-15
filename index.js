@@ -1,4 +1,4 @@
-let tg = window.Telegram.WebApp;
+let tg = Promise.all((window.Telegram.WebApp).then(data => data));
 let form = document.querySelector("#appointment");
 
 const appointment = {}
