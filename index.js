@@ -22,5 +22,5 @@ tg.onEvent('mainButtonClicked', () => {
         },
         body: JSON.stringify(appointment)
     });
-    tg.close();
+
 })
