@@ -12,12 +12,12 @@ form.addEventListener("submit", function(e) {
     phone = document.querySelector(".phone").value;
     comment = document.querySelector(".comment").value;
 
-    document.querySelector(".comment").textContent = "2";
-
     tg.MainButton.show();
 });
 
 tg.onEvent('mainButtonClicked', () => {
+
+    document.querySelector(".content").textContent = queryId;
 
     fetch('http://185.143.174.146:8000/web-data', {
         method: "POST",
