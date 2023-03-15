@@ -1,5 +1,4 @@
 let tg = window.Telegram.WebApp;
-let tgdata = window.Telegram.WebAppInitData;
 let form = document.querySelector("#appointment");
 
 const appointment = {}
@@ -10,9 +9,8 @@ form.addEventListener("submit", function(e) {
     appointment.name = document.querySelector(".name").value;
     appointment.phone = document.querySelector(".phone").value;
     appointment.comment = document.querySelector(".comment").value;
-    appointment.queryID = ""
+    appointment.queryID = tg.initDataUnsafe.query_id;
 
-    console.log(tgdata);
     tg.MainButton.show();
 });
 
