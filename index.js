@@ -15,7 +15,7 @@ form.addEventListener("submit", function(e) {
 });
 
 tg.onEvent('mainButtonClicked', () => {
-    fetch('http://192.168.0.2:8000/web-data', {
+    fetch('http://5.159.102.109:8000/web-data', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -23,5 +23,4 @@ tg.onEvent('mainButtonClicked', () => {
         body: JSON.stringify(appointment)
     });
 
-    document.querySelector(".content").textContent = `${appointment.queryID} ${appointment.name}`;
 })
