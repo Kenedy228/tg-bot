@@ -12,6 +12,8 @@ form.addEventListener("submit", function(e) {
     phone = document.querySelector(".phone").value;
     comment = document.querySelector(".comment").value;
 
+    document.querySelector(".comment").textContent = "2";
+
     tg.MainButton.show();
 });
 
@@ -29,7 +31,5 @@ tg.onEvent('mainButtonClicked', () => {
             queryId
         })
     })
-
-    document.querySelector(".comment").textContent = "2";
 
 })
