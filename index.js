@@ -14,7 +14,7 @@ form.addEventListener("submit", function(e) {
 });
 
 tg.onEvent('mainButtonClicked', () => {
-    fetch('http://192.168.0.2:8000/web-data', {
+    fetch('http://5.159.102.109:8000/web-data', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
