@@ -17,8 +17,6 @@ form.addEventListener("submit", function(e) {
 
 tg.onEvent('mainButtonClicked', () => {
 
-    document.querySelector(".content").textContent = queryId;
-
     fetch('http://185.143.174.146:8000/web-data', {
         method: "POST",
         headers: {
@@ -30,6 +28,12 @@ tg.onEvent('mainButtonClicked', () => {
             clientComment: comment,
             queryId
         })
+    }).then(res => {
+        if (res.ok) {
+            document.querySelector(".content").textContent = "ok";
+        } else {
+            document.querySelector(".content").textContent = "no";
+        }
     })
 
 })
