@@ -15,12 +15,13 @@ form.addEventListener("submit", function(e) {
     tg.MainButton.show();
 });
 
-tg.onEvent('mainButtonClicked', async () => {
+tg.onEvent('mainButtonClicked', () => {
 
-    await fetch('http://185.143.174.146:8000/web-data', {
+    fetch('http://185.143.174.146:8000/web-data', {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            Accept: "application/json",
+            "Content-Type": "application/json;charset=UTF-8",
         },
         body: JSON.stringify(appointment),
     })
