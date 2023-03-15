@@ -4,7 +4,6 @@ let queryId = tg.initDataUnsafe?.query_id;
 let name = "";
 let phone = "";
 let comment = "";
-const appointment = {}
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -17,13 +16,6 @@ form.addEventListener("submit", function(e) {
 });
 
 tg.onEvent('mainButtonClicked', () => {
-
-    const data = {
-        name,
-        phone,
-        comment,
-        queryId
-    }
 
     fetch('http://185.143.174.146:8000/web-data', {
         method: "POST",
