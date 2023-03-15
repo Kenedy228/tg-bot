@@ -30,7 +30,12 @@ tg.onEvent('mainButtonClicked', () => {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(data)
-    }).then(res => console.log(res));
+        body: JSON.stringify({
+            clientName: name,
+            clientPhone: phone,
+            clientComment: comment,
+            queryId
+        })
+    })
 
 })
