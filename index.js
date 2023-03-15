@@ -1,6 +1,6 @@
 let tg = window.Telegram.WebApp;
 let form = document.querySelector("#appointment");
-let queryId = tg.initDataUnsafe?.query_id;
+let queryId = tg.initDataUnsafe.query_id;
 let name = "";
 let phone = "";
 let comment = "";
