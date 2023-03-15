@@ -1,19 +1,6 @@
 let tg = window.Telegram.WebApp;
-let form = document.querySelector("#appointment");
 let queryId = tg.initDataUnsafe.query_id;
-
-const appointment = {};
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    appointment.name = document.querySelector(".name").value;
-    appointment.phone = document.querySelector(".phone").value;
-    appointment.comment = document.querySelector(".comment").value;
-    appointment.queryId = queryId;
-
-    tg.MainButton.show();
-});
+tg.MainButton.show();
 
 tg.onEvent('mainButtonClicked', () => {
 
@@ -23,7 +10,11 @@ tg.onEvent('mainButtonClicked', () => {
             Accept: "application/json",
             "Content-Type": "application/json;charset=UTF-8",
         },
-        body: JSON.stringify(appointment),
+        body: JSON.stringify({
+            name: "Данил",
+            phone: "+79144284899",
+            queryId
+        }),
     })
 
 })
