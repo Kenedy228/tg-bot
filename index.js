@@ -1,31 +1,26 @@
 let tg = window.Telegram.WebApp;
+let form = document.querySelector("#appointment");
 
-async function start() {
-    await tg.ready();
-    let form = document.querySelector("#appointment");
+const appointment = {}
 
-    const appointment = {}
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
+    appointment.name = document.querySelector(".name").value;
+    appointment.phone = document.querySelector(".phone").value;
+    appointment.comment = document.querySelector(".comment").value;
+    appointment.queryID = tg.initDataUnsafe.user.query_id;
 
-        appointment.name = document.querySelector(".name").value;
-        appointment.phone = document.querySelector(".phone").value;
-        appointment.comment = document.querySelector(".comment").value;
-        appointment.queryID = tg.initDataUnsafe.user.query_id;
+    tg.MainButton.show();
+});
 
-        tg.MainButton.show();
+tg.onEvent('mainButtonClicked', () => {
+    fetch('http://5.159.102.109:8000/web-data', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(appointment)
     });
-
-    tg.onEvent('mainButtonClicked', () => {
-        fetch('http://5.159.102.109:8000/web-data', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(appointment)
-        });
-    })
-}
-
-start();
+    tg.close();
+})
