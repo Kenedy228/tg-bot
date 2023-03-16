@@ -1,5 +1,6 @@
 let tg = window.Telegram.WebApp;
 tg.MainButton.text = "Оставить заявку";
+tg.MainButton.color = "#00b1a8";
 tg.MainButton.show();
 
 const form = document.querySelector(".appointment");
