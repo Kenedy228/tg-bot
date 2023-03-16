@@ -9,6 +9,7 @@ h1 {
     font-weight: 700;
     color: #fff;
     font-family: 'Fira Sans', sans-serif;
+    margin-bottom: 20px;
 }
 
 .name, .phone, .comment {
