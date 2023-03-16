@@ -16,7 +16,7 @@ tg.onEvent('mainButtonClicked', () => {
             comment
         }))
     } else {
-        alert("Заполните все поля со *");
+        tg.showAlert("Заполните все поля со *");
     }
 
 })
