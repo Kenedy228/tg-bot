@@ -1,4 +1,5 @@
 let tg = window.Telegram.WebApp;
+tg.MainButton.text = "Оставить заявку";
 tg.MainButton.show();
 
 const form = document.querySelector(".appointment");
