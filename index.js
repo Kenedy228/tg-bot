@@ -3,12 +3,6 @@ tg.MainButton.text = "Оставить заявку";
 tg.MainButton.color = "#00b1a8";
 tg.MainButton.show();
 
-const phone = document.querySelector(".phone");
-
-const maskOptions = {
-    mask: '+{7}(000)000-00-00'
-};
-const mask = new IMask(phone, maskOptions);
 
 tg.onEvent('mainButtonClicked', () => {
 
@@ -25,5 +19,16 @@ tg.onEvent('mainButtonClicked', () => {
     } else {
         tg.showAlert("Заполните все поля со *");
     }
+
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const inputElement = document.querySelector('.phone') // ищем наш единственный input
+    const maskOptions = { // создаем объект параметров
+        mask: '+{7}(000)000-00-00' // задаем единственный параметр mask
+    }
+    IMask(inputElement, maskOptions) // запускаем плагин с переданными параметрами
 
 })
