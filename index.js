@@ -1,29 +1,6 @@
-let tg = window.Telegram.WebApp;
-tg.MainButton.text = "Оставить заявку";
-tg.MainButton.color = "#00b1a8";
-tg.MainButton.show();
+const express = require("express");
 
-const phone = document.querySelector(".phone");
+const app = express();
+const port = 8000;
 
-const maskOptions = {
-    mask: '+{7}(000)000-00-00'
-};
-const mask = IMask(phone, maskOptions);
-
-tg.onEvent('mainButtonClicked', () => {
-
-    const name = document.querySelector(".name").value;
-    const phone = document.querySelector(".phone").value;
-    const comment = document.querySelector(".comment").value;
-
-    if (name && phone) {
-        tg.sendData(JSON.stringify({
-            name,
-            phone,
-            comment
-        }))
-    } else {
-        tg.showAlert("Заполните все поля со *");
-    }
-
-})
+app.listen(8000, () => console.log("server started at port: " + port));
