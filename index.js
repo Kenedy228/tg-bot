@@ -12,12 +12,14 @@ const mask = IMask(phone, maskOptions);
 
 tg.onEvent('mainButtonClicked', () => {
 
+    const type = "Запись"
     const name = document.querySelector(".name").value;
     const phone = document.querySelector(".phone").value;
     const comment = document.querySelector(".comment").value;
 
     if (name && phone) {
         tg.sendData(JSON.stringify({
+            type,
             name,
             phone,
             comment
