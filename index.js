@@ -5,9 +5,9 @@ tg.MainButton.show();
 
 const phone = document.querySelector(".phone");
 
-phone.addEventListener('keydown', () => {
-    phone.value = "+7";
-})
+// phone.addEventListener('keydown', () => {
+//
+// })
 
 tg.onEvent('mainButtonClicked', () => {
 
